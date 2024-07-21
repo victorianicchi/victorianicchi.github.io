@@ -7,17 +7,15 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    color: #333;
 }
 
 header {
-    background: white;
-    padding: 1rem;
-}
-
-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
 }
 
 .logo {
@@ -36,53 +34,67 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: #333;
 }
 
-.hero {
-    background-image: url('background-image.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.contact-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
 }
 
-.hero h1 {
-    font-size: 5rem;
+.form-group {
     margin-bottom: 1rem;
 }
 
-.about, .profile {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+label {
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
-.profile img {
+input, textarea {
     width: 100%;
-    max-width: 300px;
-    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
 }
 
-.categories {
+.name-fields {
     display: flex;
-    justify-content: space-around;
-    padding: 2rem;
+    gap: 1rem;
 }
 
-.category {
-    text-align: center;
+.name-fields input {
+    flex: 1;
 }
 
-.category img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
+textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    align-self: flex-start;
+    background-color: #f38181;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e76f6f;
 }
