@@ -1,4 +1,6 @@
-/* Basic resets */
+/* -------------------------
+   BASIC RESETS
+-------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +11,9 @@
     font-family: sans-serif;
   }
   
-  /* Header */
+  /* -------------------------
+     HEADER
+  -------------------------- */
   .site-header {
     background: #fff;
     border-bottom: 1px solid #ddd;
@@ -24,52 +28,34 @@
   
   .top-nav a {
     text-decoration: none;
-    color: #6c63ff; /* just an example color */
+    color: #6c63ff; /* example color */
   }
   
   .top-nav a:hover {
     text-decoration: underline;
   }
   
-  /* Home page (home.html) */
+  /* -------------------------
+     HOME PAGE
+  -------------------------- */
   .home-page {
     padding: 2rem;
     text-align: center;
   }
   
-  /* Obras page layout */
-  .obras-page {
-    padding: 2rem;
-  }
-  
-  .obras-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  /* Make each obra “slot” the same width so images line up, 
-     but allow images to remain in different heights if needed. */
-  .obra {
-    flex: 1 1 300px;  /* or some other fixed width, e.g. 1 1 30% */
-    max-width: 300px; /* limit the max width if you like */
-  }
-  
-  .obra img {
-    width: 100%; /* keep images the same width as the container */
-    height: auto; /* preserve aspect ratio (they can have diff heights) */
-    display: block;
-  }
-  
+  /* -------------------------
+     ABOUT / INFORMATION PAGE
+     (Image left, text right)
+  -------------------------- */
   .info-wrapper {
     display: flex;
     gap: 2rem;
     padding: 2rem;
-    align-items: center; /* vertically center the image + text */
+    align-items: center; /* vertically center image + text */
   }
   
   .info-image img {
-    max-width: 400px; /* or however wide you want */
+    max-width: 400px;
     height: auto;
     display: block;
   }
@@ -82,37 +68,46 @@
     margin-bottom: 1rem;
   }
   
-  /* Example basic styling for the "obras-section" */
-
-.obras-section {
+  /* -------------------------
+     OBRAS SECTION (MAIN PAGE)
+     Displays images side by side
+  -------------------------- */
+  .obras-section {
+    /* Use flex so images line up horizontally (wrap if screen is too narrow) */
+    display: flex;
+    flex-wrap: wrap;         /* allows wrapping on smaller screens */
+    justify-content: center; /* center them horizontally */
+    gap: 1rem;               /* space between items */
     margin-top: 2rem;
-    text-align: center; /* center the heading and images */
+    text-align: center;
   }
   
+  /* Heading inside the obras-section */
   .obras-section h2 {
+    flex-basis: 100%;  /* make the heading span the full width (new row) */
+    text-align: left;  /* or center, depending on your preference */
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }
   
-  .obras-section .obra {
-    /* inline-block to place them side by side */
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 1rem 1.5rem; /* spacing around each card */
-    width: 280px;         /* fixed width so images/captions align */
+  /* Each obra block (one image + caption) */
+  .obra {
+    width: 200px;        /* same width for all */
+    text-align: center;
   }
   
-  .obras-section .obra img {
+  .obra img {
     width: 100%;
-    height: auto;   /* keep original aspect ratio */
-    display: block; /* remove inline gap below image */
-    border: 1px solid #eee;  /* optional border or box-shadow */
+    height: 150px;       /* force same height for all images */
+    object-fit: cover;   /* crop edges if needed to fill 150px */
+    display: block;
+    border: 1px solid #eee; /* optional styling, or box-shadow */
   }
   
-  .obras-section .obra p {
+  .obra p {
     margin-top: 0.5rem;
     font-size: 1rem;
-    color: #777;      /* or any color you prefer (like greenish) */
-    font-weight: 500; /* optional styling */
+    font-weight: 500;
+    color: #666;
   }
   

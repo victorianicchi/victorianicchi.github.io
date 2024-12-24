@@ -11,7 +11,6 @@ title: "Home"
 <div class="obras-section">
   <h2>My Latest Projects</h2>
   
-  <!-- Each "obra" block is one project with an image + caption -->
   <div class="obra">
     <img src="{{ '/assets/images/obra1.jpg' | relative_url }}" alt="Obra 1" />
     <p>viviendas Utopia Senior</p>
