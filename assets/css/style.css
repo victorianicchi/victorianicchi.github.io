@@ -61,3 +61,24 @@
     display: block;
   }
   
+  .info-wrapper {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center; /* vertically center the image + text */
+  }
+  
+  .info-image img {
+    max-width: 400px; /* or however wide you want */
+    height: auto;
+    display: block;
+  }
+  
+  .info-text {
+    flex: 1; /* let the text take remaining space */
+  }
+  
+  .info-text h2 {
+    margin-bottom: 1rem;
+  }
+  
