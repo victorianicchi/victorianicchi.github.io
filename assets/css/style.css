@@ -1,0 +1,63 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  /* Header */
+  .site-header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+  }
+  
+  .top-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .top-nav a {
+    text-decoration: none;
+    color: #6c63ff; /* just an example color */
+  }
+  
+  .top-nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Home page (home.html) */
+  .home-page {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Obras page layout */
+  .obras-page {
+    padding: 2rem;
+  }
+  
+  .obras-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* Make each obra “slot” the same width so images line up, 
+     but allow images to remain in different heights if needed. */
+  .obra {
+    flex: 1 1 300px;  /* or some other fixed width, e.g. 1 1 30% */
+    max-width: 300px; /* limit the max width if you like */
+  }
+  
+  .obra img {
+    width: 100%; /* keep images the same width as the container */
+    height: auto; /* preserve aspect ratio (they can have diff heights) */
+    display: block;
+  }
+  

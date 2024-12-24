@@ -1,0 +1,11 @@
+title: "Victoria Nicchi Portfolio"
+description: "Architecture Portfolio of Victoria Nicchi"
+theme: minima  # or remove this if you have your own styling
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# GitHub Pages usually sets the baseurl automatically. 
+# If you need a local baseurl, uncomment below:
+# baseurl: "/victoria-nicchi-portfolio"
