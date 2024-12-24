@@ -82,3 +82,37 @@
     margin-bottom: 1rem;
   }
   
+  /* Example basic styling for the "obras-section" */
+
+.obras-section {
+    margin-top: 2rem;
+    text-align: center; /* center the heading and images */
+  }
+  
+  .obras-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .obras-section .obra {
+    /* inline-block to place them side by side */
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1rem 1.5rem; /* spacing around each card */
+    width: 280px;         /* fixed width so images/captions align */
+  }
+  
+  .obras-section .obra img {
+    width: 100%;
+    height: auto;   /* keep original aspect ratio */
+    display: block; /* remove inline gap below image */
+    border: 1px solid #eee;  /* optional border or box-shadow */
+  }
+  
+  .obras-section .obra p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #777;      /* or any color you prefer (like greenish) */
+    font-weight: 500; /* optional styling */
+  }
+  
