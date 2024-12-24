@@ -111,3 +111,52 @@
     color: #666;
   }
   
+/* CONTACT PAGE STYLES */
+
+/* Main wrapper uses flex to position left instructions & right form side by side */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;       /* allows wrapping on small screens */
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  /* Left instructions box */
+  .contact-instructions {
+    flex: 1;
+    min-width: 200px;      /* ensure it has some space on narrow screens */
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Right form box */
+  .contact-form {
+    flex: 1;
+    min-width: 300px;      /* enough room for the form fields */
+    max-width: 400px;      /* limit it so it’s not too wide */
+  }
+  
+  /* Inside the form, stack label + input/textarea vertically */
+  .contact-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+  }
+  
+  .contact-form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #000;
+  }
+  
