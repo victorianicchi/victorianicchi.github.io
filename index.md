@@ -3,14 +3,7 @@ layout: default
 title: "Home"
 ---
 
-<div class="home-page">
-  <h1>Welcome to My Architecture Portfolio</h1>
-  <p>Hi, I’m Victoria Nicchi, an architect… (introduce yourself here)</p>
-</div>
-
-<div class="obras-section">
-  <h2>My Latest Projects</h2>
-  
+<div class="obras-section">  
   <div class="obra">
     <img src="{{ '/assets/images/obra1.jpg' | relative_url }}" alt="Obra 1" />
     <p>viviendas Utopia Senior</p>
