@@ -12,28 +12,39 @@
   }
   
   /* -------------------------
-     HEADER
+     HEADER (New black, minimal)
   -------------------------- */
   .site-header {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-    padding: 0.5rem 1rem;
+    background: #000;      /* black background */
+    padding: 1rem;         /* more padding for an "airy" feel */
   }
   
   .top-nav ul {
     list-style-type: none;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    /* Align right or center as you prefer: */
+    justify-content: flex-end; /* moves menu to the right */
+    /* or justify-content: center; for center-aligned nav */
+  }
+  
+  .top-nav li {
+    /* optional margin if you want more spacing */
   }
   
   .top-nav a {
     text-decoration: none;
-    color: #6c63ff; /* example color */
+    color: #fff;          /* white text on black background */
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
   }
   
   .top-nav a:hover {
-    text-decoration: underline;
+    color: #ccc;          /* lighter gray on hover */
   }
+  
+  /* Example: If you don’t want any border line under header: remove it */
   
   /* -------------------------
      HOME PAGE
@@ -73,7 +84,6 @@
      Displays images side by side
   -------------------------- */
   .obras-section {
-    /* Use flex so images line up horizontally (wrap if screen is too narrow) */
     display: flex;
     flex-wrap: wrap;         /* allows wrapping on smaller screens */
     justify-content: center; /* center them horizontally */
@@ -111,32 +121,29 @@
     color: #666;
   }
   
-/* CONTACT PAGE STYLES */
-
-/* Main wrapper uses flex to position left instructions & right form side by side */
-.contact-container {
+  /* -------------------------
+     CONTACT PAGE STYLES
+  -------------------------- */
+  .contact-container {
     display: flex;
     flex-wrap: wrap;       /* allows wrapping on small screens */
     gap: 2rem;
     padding: 2rem;
   }
   
-  /* Left instructions box */
   .contact-instructions {
     flex: 1;
-    min-width: 200px;      /* ensure it has some space on narrow screens */
+    min-width: 200px;
     font-size: 1rem;
     line-height: 1.6;
   }
   
-  /* Right form box */
   .contact-form {
     flex: 1;
-    min-width: 300px;      /* enough room for the form fields */
-    max-width: 400px;      /* limit it so it’s not too wide */
+    min-width: 300px;
+    max-width: 400px;
   }
   
-  /* Inside the form, stack label + input/textarea vertically */
   .contact-form label {
     display: block;
     margin: 1rem 0 0.5rem;
