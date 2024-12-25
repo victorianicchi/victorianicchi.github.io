@@ -166,3 +166,40 @@
     border: 1px solid #000;
   }
   
+  /* SERVICES PAGE STYLES */
+.services-page {
+    padding: 2rem;
+    max-width: 1000px;    /* if you want a readable width limit */
+    margin: 0 auto;       /* center horizontally */
+    line-height: 1.6;
+  }
+  
+  .services-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .service-block {
+    margin-bottom: 2rem;
+  }
+  
+  .service-block h2 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .service-block p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Optional horizontal rule styling: */
+  .services-page hr {
+    margin: 3rem 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+  }
+  
