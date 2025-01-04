@@ -1,6 +1,7 @@
 // pages/_app.js
-import '@/styles/global.css'; // Imports our global stylesheet
+import '../styles/global.css'; // Imports our global stylesheet
 import Head from 'next/head';
+
 
 function MyApp({ Component, pageProps }) {
   return (
