@@ -20,7 +20,7 @@ export default function Home() {
     {
       pdf: 'centro-cultural.pdf',
       img: 'obra2.jpg',
-      title: 'centro cultural,
+      title: 'centro cultural',
     },
     {
       pdf: 'el-superedificio.pdf',
