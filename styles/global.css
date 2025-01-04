@@ -20,20 +20,18 @@
 /* styles/global.css */
 
 .site-header {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #eee;
-    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center; /* center everything horizontally */
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 999;
-  
-    /* Center horizontally */
-    display: flex;
-    justify-content: center;
-    /* If you want a bit of vertical centering for the header items as well: */
-    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #eee;
+    padding: 0.75rem 1rem;
   }
+  
   
   .top-nav ul {
     list-style: none;

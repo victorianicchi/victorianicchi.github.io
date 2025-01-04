@@ -1,17 +1,12 @@
 // pages/_app.js
-import '../styles/global.css'; // Imports our global stylesheet
-import Head from 'next/head';
-
+import '../styles/global.css';
+import { LanguageProvider } from '../context/LanguageContext';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* You can include default meta or a <title> here if desired */}
-      </Head>
+    <LanguageProvider>
       <Component {...pageProps} />
-    </>
+    </LanguageProvider>
   );
 }
 

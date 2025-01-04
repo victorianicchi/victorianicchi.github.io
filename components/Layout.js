@@ -1,24 +1,27 @@
 // components/Layout.js
 import Head from 'next/head';
 import Header from './Header';
-import Footer from './Footer';
+// (Optional) Create a Footer.js if you want a site footer.
 
 export default function Layout({ children, pageTitle }) {
   return (
     <>
       <Head>
-        <title>{pageTitle ? `${pageTitle} | ` : ''}Victoria Nicchi Portfolio</title>
-        <meta name="description" content="Showcasing a minimal, elegant architecture portfolio" />
+        <title>{pageTitle} | Victoria Nicchi Portfolio</title>
+        <meta
+          name="description"
+          content="Architecture portfolio showcasing minimal, elegant design."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
 
-      <main className="fade-in">
+      <main>
         {children}
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

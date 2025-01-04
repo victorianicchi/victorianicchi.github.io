@@ -1,36 +1,48 @@
 // components/Header.js
 import Link from 'next/link';
 import Image from 'next/image';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Header() {
+  const { lang, toggleLang } = useLanguage();
+
   return (
     <header className="site-header">
       <nav className="top-nav">
         <ul>
+          {/* Home */}
           <li>
             <Link href="/">
-              <a>Home</a>
+              <a>{lang === 'en' ? 'Home' : 'Inicio'}</a>
             </Link>
           </li>
+
+          {/* About */}
           <li>
             <Link href="/about">
-              <a>About</a>
+              <a>{lang === 'en' ? 'About' : 'Acerca'}</a>
             </Link>
           </li>
+
+          {/* CV: points to /pdf/cv.pdf */}
           <li>
             <a
               href="/pdf/cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
-              CV
+              {lang === 'en' ? 'CV' : 'CV'}
             </a>
           </li>
+
+          {/* Contact */}
           <li>
             <Link href="/contact">
-              <a>Contact</a>
+              <a>{lang === 'en' ? 'Contact' : 'Contacto'}</a>
             </Link>
           </li>
+
+          {/* Instagram icon/button */}
           <li>
             <a
               href="https://www.instagram.com/__vickynicchi"
@@ -47,6 +59,14 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+
+      {/* Language Toggle Button */}
+      <button
+        onClick={toggleLang}
+        className="lang-toggle-button"
+      >
+        {lang === 'en' ? 'Español' : 'English'}
+      </button>
     </header>
   );
 }

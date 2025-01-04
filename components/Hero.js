@@ -1,12 +1,24 @@
 // components/Hero.js
+import { useLanguage } from '../context/LanguageContext';
+
 export default function Hero() {
-    return (
-      <section className="hero fade-in">
-        <h1>Victoria Nicchi</h1>
-        <p>An Architect’s Portfolio Showcasing Minimalist Elegance & Smart Design</p>
-        {/* Optional: A call-to-action button */}
-        {/* <a href="#portfolio" className="cta-button">Explore My Work</a> */}
-      </section>
-    );
-  }
-  
+  const { lang } = useLanguage();
+
+  const content = {
+    en: {
+      heading: 'Welcome to My Portfolio',
+      subheading: 'Exploring Architecture & Art in a Minimalist Way',
+    },
+    es: {
+      heading: 'Bienvenidos a Mi Portafolio',
+      subheading: 'Explorando Arquitectura & Arte de una Forma Minimalista',
+    },
+  };
+
+  return (
+    <section className="hero fade-in">
+      <h1>{content[lang].heading}</h1>
+      <p>{content[lang].subheading}</p>
+    </section>
+  );
+}

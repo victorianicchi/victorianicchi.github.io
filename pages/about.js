@@ -1,11 +1,43 @@
 // pages/about.js
 import Layout from '../components/Layout';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function About() {
+  const { lang } = useLanguage();
+
+  // Bilingual text content for the About page
+  const content = {
+    en: (
+      <>
+        <h2>About</h2>
+        <p>
+          Greetings! I’m Victoria Nicchi, an architecture student at the University
+          of Buenos Aires, offering architectural and design services...
+        </p>
+        <p>
+          Collaboration is central to my work, ensuring each space resonates 
+          with the individuality of those who inhabit it...
+        </p>
+      </>
+    ),
+    es: (
+      <>
+        <h2>Acerca de mí</h2>
+        <p>
+          ¡Hola! Soy Victoria Nicchi, estudiante de arquitectura en la Universidad
+          de Buenos Aires, y ofrezco servicios de arquitectura y diseño...
+        </p>
+        <p>
+          La colaboración es fundamental en mi trabajo, asegurándome de que cada 
+          espacio refleje la identidad de quienes lo habitan...
+        </p>
+      </>
+    ),
+  };
+
   return (
-    <Layout pageTitle="About">
+    <Layout pageTitle={lang === 'en' ? 'About' : 'Acerca de mí'}>
       <div className="info-wrapper" style={{ alignItems: 'flex-start' }}>
-        {/* Smaller image */}
         <div className="info-image" style={{ maxWidth: '300px', marginRight: '2rem' }}>
           <img
             src="/images/about_picture.jpg"
@@ -13,26 +45,8 @@ export default function About() {
             style={{ width: '100%', height: 'auto', borderRadius: '4px' }}
           />
         </div>
-
-        {/* Rewritten text */}
         <div className="info-text">
-          <h2>About</h2>
-          <p>
-            Greetings! I’m Victoria Nicchi, an architectural student at the University of
-            Buenos Aires, offering comprehensive architectural and design services. My practice
-            includes meticulously developing plans and drawings, creating immersive 3D models,
-            producing photorealistic visualizations, and guiding the design development process. 
-            I leverage leading software—AutoCAD, Revit, SketchUp, Rhinoceros, Lumion, and Adobe 
-            Suite—to craft refined solutions that fuse artistic expression with architectural rigor.
-          </p>
-
-          <p>
-            Collaboration is central to my work, ensuring that every space resonates with 
-            the individuality of those who inhabit it. My design philosophy centers on 
-            reductivism and beautility, marrying simplicity with purposeful elegance. 
-            I hold my clients’ needs at the heart of each project, transforming conceptual ideas 
-            into built realities. Let’s craft a distinctive environment together!
-          </p>
+          {content[lang]}
         </div>
       </div>
     </Layout>
