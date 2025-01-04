@@ -13,19 +13,19 @@ export default function Home() {
       title: 'escuela primaria',
     },
     {
-      pdf: 'CasagrandeCondo.pdf',
+      pdf: 'centro-cultural.pdf',
       img: 'obra2.jpg',
-      title: 'condo hotel casagrande',
+      title: 'centro cultural,
     },
     {
-      pdf: 'CasaSevilla.pdf',
+      pdf: 'el-superedificio.pdf',
       img: 'obra3.jpg',
-      title: 'casa sevilla',
+      title: 'el superedificio',
     },
     {
-      pdf: 'EdificioVilela2.pdf',
+      pdf: 'mitosis.pdf',
       img: 'obra4.jpg',
-      title: 'edificio vilela 2',
+      title: 'mitosis',
     },
     {
       pdf: 'EdificioCommodore.pdf',
