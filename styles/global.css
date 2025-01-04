@@ -10,43 +10,12 @@
   box-sizing: border-box;
 }
 
-/* In global.css (optional) */
-.info-image img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 4px;
-  }
-  
-/* styles/global.css */
-
-.site-header {
-    display: flex;
-    justify-content: center; /* center everything horizontally */
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid #eee;
-    padding: 0.75rem 1rem;
-  }
-  
-  
-  .top-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-  }
-  
 /* 2. Typography & body settings */
 html {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont,
                'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* smooth scrolling for in-page links, etc. */
 }
 
 body {
@@ -69,26 +38,39 @@ a:hover {
 /* 4. Header styles */
 .site-header {
   display: flex;
+  justify-content: center; /* center horizontally */
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
   z-index: 999;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid #eee;
-}
-
-.site-header .logo {
-  font-weight: 600;
-  font-size: 1.2rem;
+  padding: 0.75rem 1rem;
 }
 
 .top-nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Language Toggle Button (nicer styling) */
+.lang-toggle-button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 2px solid #000;
+  background-color: #f7f7f7;
+  color: #000;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.lang-toggle-button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 /* 5. Hero component */
@@ -100,7 +82,6 @@ a:hover {
   height: 80vh;
   padding: 2rem;
   background-color: #f9f9f9;
-  /* Could use a background image if desired, or a gradient */
 }
 
 .hero h1 {
@@ -116,7 +97,32 @@ a:hover {
   max-width: 600px;
 }
 
-/* 6. A section for the "cards" or images */
+/* 6. "About" / info-image (optional) */
+.info-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Example for a 2-column about section, if used:
+.home-about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+.about-image {
+  flex-basis: 300px;
+  max-width: 300px;
+  margin-left: auto;
+}
+*/
+
+/* 7. Portfolio grid for cards or images */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -153,7 +159,7 @@ a:hover {
   text-align: center;
 }
 
-/* 7. Footer */
+/* 8. Footer */
 .site-footer {
   padding: 2rem;
   background: #f9f9f9;
@@ -162,12 +168,11 @@ a:hover {
   color: #666;
 }
 
-/* 8. Subtle fade-in animation for sections */
+/* 9. Subtle fade-in animation for sections */
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s forwards ease-in-out;
 }
-
 @keyframes fadeIn {
   to { opacity: 1; }
 }

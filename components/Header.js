@@ -17,13 +17,6 @@ export default function Header() {
             </Link>
           </li>
 
-          {/* About */}
-          <li>
-            <Link href="/about">
-              <a>{lang === 'en' ? 'About' : 'Acerca'}</a>
-            </Link>
-          </li>
-
           {/* CV: points to /pdf/cv.pdf */}
           <li>
             <a
@@ -60,7 +53,7 @@ export default function Header() {
         </ul>
       </nav>
 
-      {/* Language Toggle Button */}
+      {/* Language Toggle Button (styled nicer) */}
       <button
         onClick={toggleLang}
         className="lang-toggle-button"
