@@ -1,24 +1,24 @@
 // components/Layout.js
 import Head from 'next/head';
 import Header from './Header';
+import Footer from './Footer';
 
-export default function Layout({ children, pageTitle, siteTitle = 'Victoria Nicchi Portfolio', description }) {
+export default function Layout({ children, pageTitle }) {
   return (
     <>
       <Head>
-        <title>
-          {pageTitle} | {siteTitle}
-        </title>
-        {description && <meta name="description" content={description} />}
-        {/* Add any other SEO or link tags here */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <title>{pageTitle ? `${pageTitle} | ` : ''}Victoria Nicchi Portfolio</title>
+        <meta name="description" content="Showcasing a minimal, elegant architecture portfolio" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
 
-      <main>
+      <main className="fade-in">
         {children}
       </main>
+
+      <Footer />
     </>
   );
 }

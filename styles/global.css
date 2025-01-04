@@ -1,169 +1,142 @@
 /* styles/global.css */
 
-/* -------------------------
-   BASIC RESETS
--------------------------- */
+/* 1. Base reset & font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-    color: #444; /* Default text color */
-  }
-  
-  /* -------------------------
-     HEADER (GRAY, NO BRAND, CENTERED MENU)
-  -------------------------- */
-  .site-header {
-    background: #333;          /* Dark gray background */
-    padding: 0.75rem 1.5rem;
-    border-bottom: 1px solid #555; /* Slightly lighter than background */
-  }
-  
-  .top-nav {
-    display: flex;
-    justify-content: center;   /* Center the entire menu horizontally */
-    align-items: center;       /* Vertically center items */
-  }
-  
-  .top-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .top-nav ul li a {
-    color: #eee;                /* Light gray text on dark background */
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.2s ease;
-  }
-  
-  .top-nav ul li a:hover {
-    color: #ccc;                /* Slightly lighter on hover */
-  }
-  
-  /* -------------------------
-     HOME PAGE
-  -------------------------- */
-  .home-page {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  /* -------------------------
-     ABOUT / INFORMATION PAGE
-     (Image left, text right)
-  -------------------------- */
-  .info-wrapper {
-    display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    align-items: center;
-  }
-  
-  .info-image img {
-    max-width: 400px;
-    height: auto;
-    display: block;
-  }
-  
-  .info-text {
-    flex: 1;
-  }
-  
-  .info-text h2 {
-    margin-bottom: 1rem;
-  }
-  
-  /* -------------------------
-     OBRAS SECTION
-  -------------------------- */
-  .obras-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .obra {
-    width: 250px; /* fixed width */
-    text-align: center;
-  }
-  
-  .obra img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: 1px solid #eee;
-  }
-  
-  .obra p {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #666;
-  }
-  
-  /* -------------------------
-     CONTACT PAGE
-  -------------------------- */
-  .contact-page {
-    padding: 2rem;
-  }
-  
-  .contact-header {
-    margin-bottom: 1rem;
-  }
-  
-  .contact-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .contact-instructions {
-    flex: 1;
-    min-width: 200px;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .contact-form {
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
-  }
-  
-  .contact-form label {
-    display: block;
-    margin: 1rem 0 0.5rem;
-    font-weight: bold;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    font-family: inherit;
-  }
-  
-  .contact-form button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    background: #fff;
-    border: 1px solid #000;
-  }
-  
-  /* Add more styles as needed */
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Typography & body settings */
+html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 
+               'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  color: #111;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 3. Basic link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+/* 4. Header styles */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  border-bottom: 1px solid #eee;
+}
+
+.site-header .logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* 5. Hero component */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 80vh;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  /* Could use a background image if desired, or a gradient */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #444;
+  max-width: 600px;
+}
+
+/* 6. A section for the "cards" or images */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-4px);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-item .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255,255,255, 0.8);
+  text-align: center;
+}
+
+/* 7. Footer */
+.site-footer {
+  padding: 2rem;
+  background: #f9f9f9;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* 8. Subtle fade-in animation for sections */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards ease-in-out;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
