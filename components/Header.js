@@ -5,26 +5,18 @@ import Image from 'next/image';
 export default function Header() {
   return (
     <header className="site-header">
-      {/* We remove the logo/brand text (e.g., "V. Nicchi"), 
-          so just the nav remains. */}
-
       <nav className="top-nav">
         <ul>
-          {/* Home */}
           <li>
             <Link href="/">
               <a>Home</a>
             </Link>
           </li>
-
-          {/* About */}
           <li>
             <Link href="/about">
               <a>About</a>
             </Link>
           </li>
-
-          {/* CV: points to /pdf/cv.pdf */}
           <li>
             <a
               href="/pdf/cv.pdf"
@@ -34,15 +26,11 @@ export default function Header() {
               CV
             </a>
           </li>
-
-          {/* Contact */}
           <li>
             <Link href="/contact">
               <a>Contact</a>
             </Link>
           </li>
-
-          {/* Instagram icon/button */}
           <li>
             <a
               href="https://www.instagram.com/__vickynicchi"
