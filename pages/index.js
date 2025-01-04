@@ -8,9 +8,9 @@ export default function Home() {
   // Same Obras data (no bilingual heading needed)
   const obrasData = [
     {
-      pdf: 'UtopiaSenior.pdf',
+      pdf: 'escuela-primaria.pdf',
       img: 'obra1.jpg',
-      title: 'viviendas Utopia Senior',
+      title: 'escuela primaria',
     },
     {
       pdf: 'CasagrandeCondo.pdf',
