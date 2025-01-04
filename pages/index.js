@@ -5,8 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 export default function Home() {
   const { lang } = useLanguage();
 
-  // Same Obras data for both languages
-  // (You could change the titles if you wanted bilingual titles.)
+  // Same Obras data (no bilingual heading needed)
   const obrasData = [
     {
       pdf: 'UtopiaSenior.pdf',
@@ -35,22 +34,10 @@ export default function Home() {
     },
   ];
 
-  // If you want a bilingual heading for your obras section:
-  const sectionTitle = {
-    en: 'My Works',
-    es: 'Mis Obras',
-  };
-
   return (
     <Layout pageTitle={lang === 'en' ? 'Home' : 'Inicio'}>
-      {/* We only show the Obras / portfolio grid now,
-          removing any hero text or about text from here. */}
-
-      <section className="portfolio-grid fade-in">
-        <h2 style={{ marginLeft: '2rem' }}>
-          {sectionTitle[lang]}
-        </h2>
-
+      {/* We no longer have the heading. We only display the portfolio items. */}
+      <section id="portfolio" className="portfolio-grid fade-in">
         {obrasData.map((obra, index) => (
           <a
             key={index}
