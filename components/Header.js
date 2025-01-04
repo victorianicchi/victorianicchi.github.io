@@ -17,7 +17,14 @@ export default function Header() {
             </Link>
           </li>
 
-          {/* CV: points to /pdf/cv.pdf */}
+          {/* About */}
+          <li>
+            <Link href="/about">
+              <a>{lang === 'en' ? 'About' : 'Acerca'}</a>
+            </Link>
+          </li>
+
+          {/* CV */}
           <li>
             <a
               href="/pdf/cv.pdf"
@@ -35,7 +42,7 @@ export default function Header() {
             </Link>
           </li>
 
-          {/* Instagram icon/button */}
+          {/* Instagram */}
           <li>
             <a
               href="https://www.instagram.com/__vickynicchi"
@@ -53,12 +60,12 @@ export default function Header() {
         </ul>
       </nav>
 
-      {/* Language Toggle Button (styled nicer) */}
+      {/* Language Toggle Button -> "en" / "es" */}
       <button
         onClick={toggleLang}
         className="lang-toggle-button"
       >
-        {lang === 'en' ? 'Español' : 'English'}
+        {lang === 'en' ? 'es' : 'en'}
       </button>
     </header>
   );
