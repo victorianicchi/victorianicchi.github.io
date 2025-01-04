@@ -8,6 +8,11 @@ export default function Home() {
   // Same Obras data (no bilingual heading needed)
   const obrasData = [
     {
+      pdf: 'reforma-casa.pdf',
+      img: 'obra5.jpg',
+      title: 'reforma casa',
+    },
+    {
       pdf: 'escuela-primaria.pdf',
       img: 'obra1.jpg',
       title: 'escuela primaria',
@@ -26,11 +31,6 @@ export default function Home() {
       pdf: 'mitosis.pdf',
       img: 'obra4.jpg',
       title: 'mitosis',
-    },
-    {
-      pdf: 'EdificioCommodore.pdf',
-      img: 'obra5.jpg',
-      title: 'edificio commodore',
     },
   ];
 
