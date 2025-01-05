@@ -128,7 +128,7 @@ y beautility... ¡Trabajemos juntos!`,
               }}
             >
               <li>
-                <a href="https://www.tiktok.com/@YourTikTokHandle">
+                <a href="https://www.tiktok.com/@victoriaanicchi">
                   <Image
                     src="/images/tiktok-icon.png"
                     alt="TikTok"
@@ -148,7 +148,7 @@ y beautility... ¡Trabajemos juntos!`,
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/YourLinkedIn">
+                <a href="https://www.linkedin.com/in/victoria-nicchi-a32b91209/">
                   <Image
                     src="/images/linkedin-icon.png"
                     alt="LinkedIn"
@@ -158,7 +158,7 @@ y beautility... ¡Trabajemos juntos!`,
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/YourXHandle">
+                <a href="https://x.com/vickynicchi">
                   <Image
                     src="/images/x-icon.png"
                     alt="X"
