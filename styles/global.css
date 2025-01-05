@@ -11,49 +11,47 @@
 }
 
 /* Example of "about" classes in global.css */
-
 .about-section {
-    background-color: #f9f9f9;
-    padding: 4rem 2rem;
-  }
-  
-  .about-section h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    font-weight: 700;
-  }
-  
-  .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-  }
-  
-  .about-text p {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 1.5rem;
-  }
-  
-  .about-image {
-    flex-basis: 350px;
-    max-width: 350px;
-    margin-left: auto;
-  }
-  
-  .about-image img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-  }
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+}
 
-  
+.about-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.about-text p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.about-image {
+  flex-basis: 350px;
+  max-width: 350px;
+  margin-left: auto;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
 /* 2. Typography & body settings */
 html {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont,
@@ -218,5 +216,7 @@ a:hover {
   animation: fadeIn 1s forwards ease-in-out;
 }
 @keyframes fadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
