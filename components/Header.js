@@ -1,6 +1,5 @@
 // components/Header.js
 import Link from 'next/link';
-import Image from 'next/image';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Header() {
@@ -8,7 +7,6 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      {/* Main navigation */}
       <nav className="top-nav">
         <ul>
           <li>
@@ -22,11 +20,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <a
-              href="/pdf/cv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/pdf/cv.pdf">
               {lang === 'en' ? 'CV' : 'CV'}
             </a>
           </li>
@@ -38,76 +32,10 @@ export default function Header() {
         </ul>
       </nav>
 
-      {/* Social links + Language toggle */}
-      <div className="header-right">
-        <ul className="social-links">
-          {/* TikTok */}
-          <li>
-            <a
-              href="https://www.tiktok.com/@YourTikTokHandle"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/tiktok-icon.png"
-                alt="TikTok"
-                width={20}
-                height={20}
-              />
-            </a>
-          </li>
-          {/* Instagram */}
-          <li>
-            <a
-              href="https://www.instagram.com/__vickynicchi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/instagram-icon.png"
-                alt="Instagram"
-                width={20}
-                height={20}
-              />
-            </a>
-          </li>
-          {/* LinkedIn */}
-          <li>
-            <a
-              href="https://www.linkedin.com/in/YourLinkedIn/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/linkedin-icon.png"
-                alt="LinkedIn"
-                width={20}
-                height={20}
-              />
-            </a>
-          </li>
-          {/* X (Twitter) */}
-          <li>
-            <a
-              href="https://twitter.com/YourHandle"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/x-icon.png"
-                alt="X"
-                width={20}
-                height={20}
-              />
-            </a>
-          </li>
-        </ul>
-
-        {/* Language toggle */}
-        <button onClick={toggleLang} className="lang-toggle-button">
-          {lang === 'en' ? 'es' : 'en'}
-        </button>
-      </div>
+      {/* Language Toggle Only (no more social icons here) */}
+      <button onClick={toggleLang} className="lang-toggle-button">
+        {lang === 'en' ? 'es' : 'en'}
+      </button>
     </header>
   );
 }

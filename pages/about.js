@@ -1,11 +1,11 @@
 // pages/about.js
 import Layout from '../components/Layout';
+import Image from 'next/image';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function About() {
   const { lang } = useLanguage();
 
-  // Bilingual About text
   const aboutContent = {
     en: {
       heading: 'About Me',
@@ -36,12 +36,10 @@ y beautility... ¡Trabajemos juntos!`,
       <section
         className="about-section fade-in"
         style={{
-          /* A light background to set it apart; adjust color as needed */
           backgroundColor: '#f9f9f9',
           padding: '4rem 2rem',
         }}
       >
-        {/* Optional larger heading */}
         <h1
           style={{
             textAlign: 'center',
@@ -60,7 +58,7 @@ y beautility... ¡Trabajemos juntos!`,
             flexWrap: 'wrap',
             gap: '2rem',
             maxWidth: '1200px',
-            margin: '0 auto', // center the whole container
+            margin: '0 auto',
             alignItems: 'center',
           }}
         >
@@ -93,15 +91,20 @@ y beautility... ¡Trabajemos juntos!`,
             </p>
           </div>
 
-          {/* Right side: image */}
+          {/* Right side: image + social icons */}
           <div
             className="about-image"
             style={{
               flexBasis: '350px',
               maxWidth: '350px',
               marginLeft: 'auto',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '1rem',
             }}
           >
+            {/* The user's image */}
             <img
               src="/images/about_picture.jpg"
               alt="Victoria Nicchi"
@@ -112,6 +115,59 @@ y beautility... ¡Trabajemos juntos!`,
                 objectFit: 'cover',
               }}
             />
+
+            {/* Social icons below the image */}
+            <ul
+              className="about-social-links"
+              style={{
+                listStyle: 'none',
+                display: 'flex',
+                gap: '1rem',
+                margin: 0,
+                padding: 0,
+              }}
+            >
+              <li>
+                <a href="https://www.tiktok.com/@YourTikTokHandle">
+                  <Image
+                    src="/images/tiktok-icon.png"
+                    alt="TikTok"
+                    width={25}
+                    height={25}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/__vickynicchi">
+                  <Image
+                    src="/images/instagram-icon.png"
+                    alt="Instagram"
+                    width={25}
+                    height={25}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/YourLinkedIn">
+                  <Image
+                    src="/images/linkedin-icon.png"
+                    alt="LinkedIn"
+                    width={25}
+                    height={25}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/YourXHandle">
+                  <Image
+                    src="/images/x-icon.png"
+                    alt="X"
+                    width={25}
+                    height={25}
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
