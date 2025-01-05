@@ -12,7 +12,7 @@ export default function About() {
       paragraph1: `Hi! I'm Victoria Nicchi, an architect student from the University of Buenos Aires.
 I offer architectural & design services including architectural plans & drawings,
 3D modeling & visualization, and design development. I'm proficient in AutoCAD,
-Revit, SketchUp, Rhinoceros, Lumion, & Adobe Suite...`,
+Revit, SketchUp, Rhinoceros, Lumion, & Adobe Suite.`,
       paragraph2: `I collaborate with my clients to create perfectly humble homes.
 My design is purposeful, producing work allied with the notions of reductivism
 and beautility... Let’s work together!`,
@@ -22,7 +22,7 @@ and beautility... Let’s work together!`,
       paragraph1: `¡Hola! Soy Victoria Nicchi, estudiante de arquitectura en la Universidad de Buenos Aires.
 Ofrezco servicios de arquitectura y diseño que incluyen planos y dibujos,
 modelado y visualización 3D, y desarrollo de proyectos. Domino AutoCAD,
-Revit, SketchUp, Rhinoceros, Lumion y Adobe Suite...`,
+Revit, SketchUp, Rhinoceros, Lumion y Adobe Suite.`,
       paragraph2: `Colaboro con mis clientes para crear hogares perfectamente humildes.
 Mi diseño es intencional, produciendo trabajo aliado con las nociones de reductivismo
 y beautility... ¡Trabajemos juntos!`,
